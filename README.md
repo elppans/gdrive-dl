@@ -1,7 +1,13 @@
 # gdrive-dl
 
 Um script Bash simples e eficiente para realizar downloads do Google Drive via terminal, lidando automaticamente com IDs, Resource Keys e redirecionamentos de segurança.
+___
+## ⚠️  AVISO IMPORTANTE (EXECUTÁVEIS):
 
+O **Google Drive** possui políticas **rígidas** para arquivos **.exe** e **.msi**.  
+Downloads diretos de executáveis costumam **falhar** ou **baixar HTML**.  
+- **DICA**: Sempre comprima arquivos do Windows (**.zip**, **.7z**, .**rar**) antes de fazer o upload para garantir que o download via terminal funcione."  
+___
 ## 🚀 Funcionalidades
 
 - Extrai automaticamente o `FILE_ID` de links de visualização ou compartilhamento.
@@ -13,7 +19,7 @@ Um script Bash simples e eficiente para realizar downloads do Google Drive via t
 
 1. Clone o repositório:
    ```bash
-   git clone [https://github.com/SEU_USUARIO/gdrive-dl.git](https://github.com/SEU_USUARIO/gdrive-dl.git)
+   git clone https://github.com/elppans/gdrive-dl.git
    cd gdrive-dl
 
 ```
@@ -38,14 +44,14 @@ sudo cp gdrive-dl.sh /usr/local/bin/gdrive-dl
 Basta passar o link de compartilhamento do Google Drive entre aspas:
 
 ```bash
-gdrive-dl "[https://drive.google.com/file/d/ID_DO_ARQUIVO/view?usp=sharing](https://drive.google.com/file/d/ID_DO_ARQUIVO/view?usp=sharing)"
+gdrive-dl "https://drive.google.com/file/d/ID_DO_ARQUIVO/view?usp=sharing"
 
 ```
 
 Se o link possuir uma `resourcekey`, o script irá detectá-la automaticamente:
 
 ```bash
-gdrive-dl "[https://drive.google.com/file/d/ID/view?resourcekey=CHAVE_AQUI](https://drive.google.com/file/d/ID/view?resourcekey=CHAVE_AQUI)"
+gdrive-dl "https://drive.google.com/file/d/ID/view?resourcekey=CHAVE_AQUI"
 
 ```
 
